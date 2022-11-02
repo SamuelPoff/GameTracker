@@ -5,12 +5,19 @@
 
     const email = ref('');
     const password = ref('');
+    const error = ref('');
 
-    function onClick_Register(){
-        Register({
-            email: email.value,
-            password: password.value
-        });
+    async function onClick_Register(){
+
+        try{
+            await Register({
+                email: email.value,
+                password: password.value
+            });
+        }
+        catch(err: any){
+            error.value = err.response.data.error;
+        }
     }
 
 </script>

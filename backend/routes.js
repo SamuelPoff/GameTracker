@@ -10,7 +10,5 @@ module.exports = (app)=>{
         jsonParser,
         AuthenticationControllerValidation.Register,
         AuthenticationController.Register);
-    
-    
 
 }

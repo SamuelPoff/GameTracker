@@ -6,9 +6,9 @@ class UserCredentials{
 
 }
 
-function Register(credentials: UserCredentials){
+async function Register(credentials: UserCredentials){
     
-    Api.post('register', credentials);
+    return Api.post('register', credentials);
 
 }
 

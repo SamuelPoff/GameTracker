@@ -1,6 +1,6 @@
 module.exports = config = {
 
-    PORT: process.env.PORT || 3000,
+    PORT: process.env.PORT || 3001,
 
     //Sequlize configuration
     db: {
