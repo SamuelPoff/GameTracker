@@ -1,13 +1,16 @@
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
+const AuthenticationController = require('./controllers/AuthenticationController');
+const AuthenticationControllerValidation = require('./validation/AuthenicationControllerValidation');
+
 module.exports = (app)=>{
 
-    app.post('/register', jsonParser, (req, res)=>{
-
-        console.log(`User ${req.body.email} was registered with password: ${req.body.password}`);
-        res.send(`User ${req.body.email} was registered`);
+    app.post('/register', 
+        jsonParser,
+        AuthenticationControllerValidation.Register,
+        AuthenticationController.Register);
     
-    });
+    
 
 }
