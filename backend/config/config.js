@@ -12,5 +12,8 @@ module.exports = config = {
             host: process.env.HOST || 'localhost',
             storage: './gametracker.sqlite'
         }
+    },
+    authentication: {
+        secret: process.env.SECRET || 'supersecret'
     }
 };

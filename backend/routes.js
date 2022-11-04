@@ -10,5 +10,9 @@ module.exports = (app)=>{
         jsonParser,
         AuthenticationControllerValidation.Register,
         AuthenticationController.Register);
+    
+    app.post('/login', 
+        jsonParser,
+        AuthenticationController.Login);
 
 }

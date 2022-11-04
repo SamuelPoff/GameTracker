@@ -28,5 +28,6 @@
     <input type="email" name="email" placeholder="yourEmail@gmail.com" v-model="email" />
     <input type="password" name="password" placeholder="Password" v-model="password" />
     <button @click="onClick_Register">Register</button>
+    <div v-if="error != ''">{{error}}</div>
 
 </template>

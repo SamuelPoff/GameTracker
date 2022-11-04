@@ -5,8 +5,6 @@ module.exports = {
     //Validate email field etc
     Register(req, res, next){
 
-        console.log(req.body);
-
         const schema = Joi.object({
             email: Joi.string().email(),
             password: Joi.string().regex(
