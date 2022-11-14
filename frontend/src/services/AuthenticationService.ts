@@ -6,10 +6,14 @@ class UserCredentials{
 
 }
 
-async function Register(credentials: UserCredentials){
+export async function Register(credentials: UserCredentials){
     
     return Api.post('register', credentials);
 
 }
 
-export default Register;
+export async function Login(credentials: UserCredentials){
+
+    return Api.post('login', credentials);
+
+}

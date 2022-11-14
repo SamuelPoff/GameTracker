@@ -50,7 +50,7 @@ module.exports = {
 
         if(user === null){
             console.log(`Login request for USER with email: ${email}. No matching record in database.`);
-            res.status(400).send({message: "No user with that email address is registered"});
+            res.status(400).send({error: "No user with that email address is registered"});
         }
         else{
 
@@ -63,7 +63,7 @@ module.exports = {
                 }
                 else{
                     console.log("Passwords do not match, sorry pal");
-                    res.send({message: "Passwords did not match pal, youre done"});
+                    res.status(400).send({error: "Passwords did not match pal, youre done"});
                 }
 
             });

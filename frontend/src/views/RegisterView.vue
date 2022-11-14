@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-    import Register from '../services/AuthenticationService';
+    import {Register} from '../services/AuthenticationService';
     import {ref} from 'vue';
 
     const email = ref('');
